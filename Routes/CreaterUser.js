@@ -7,7 +7,7 @@ import jwt from "jsonwebtoken";
 const router = express.Router();
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({ extended: true }));
-const jwtSecret = "MynameisPriyanshuGunwantworking1";
+const jwtSecret = process.env.JWT_SECRET;
 
 //handling the signup user
 router.post(

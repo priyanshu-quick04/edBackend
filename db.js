@@ -1,8 +1,10 @@
+import dotenv from "dotenv";
+dotenv.config();
 import mongoose from "mongoose";
-const mongodbURI =
-  "mongodb+srv://quickfi0408:priyanshu@cluster0.i5quape.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const mongodbURI = process.env.DATABASE_URL;
 
 const mongoDB = async () => {
+  console.log(mongodbURI);
   try {
     await mongoose.connect(mongodbURI);
     console.log("Connected to database");
