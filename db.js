@@ -4,7 +4,6 @@ import mongoose from "mongoose";
 const mongodbURI = process.env.DATABASE_URL;
 
 const mongoDB = async () => {
-  console.log(mongodbURI);
   try {
     await mongoose.connect(mongodbURI);
     console.log("Connected to database");
